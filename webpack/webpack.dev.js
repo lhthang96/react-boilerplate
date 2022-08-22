@@ -9,11 +9,13 @@ module.exports = merge(common, {
   output: {
     filename: '[name].bundle.js'
   },
+  devtool: 'source-map',
   devServer: {
     port: 8000,
     open: true,
     hot: true,
-    compress: true
+    compress: true,
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({
